@@ -1,0 +1,16 @@
+spring:
+  profiles: local
+  datasource:
+    url: jdbc:mysql://127.0.0.1:13306/test-jpa-lazy?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: test
+
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.transaction.JDBCTransaction: DEBUG
+    org.hibernate.jdbc.ConnectionManager: DEBUG
+    org.springframework.orm.jpa.JpaTransactionManager: DEBUG
+    com.zaxxer.hikari.HikariConfig: DEBUG
+    com.zaxxer.hikari: TRACE

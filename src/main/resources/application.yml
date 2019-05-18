@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      minimum-idle: 1
+      maximum-pool-size: 5
+      connection-test-query: SELECT 1
+      connection-timeout: 1000
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          batch_size: 500
